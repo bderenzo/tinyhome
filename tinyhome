@@ -1,0 +1,48 @@
+#!/usr/bin/env sh
+
+title=tinyhome
+configfile="${1:-config.csv}"
+
+get_element(){
+    echo "${2}" | cut -d',' -f${1} | xargs
+}
+
+itemize(){
+    line="${1}"
+    category="$(get_element 1 "${line}")"
+    name="$(get_element 2 "${line}")"
+    icon="$(get_element '3' "${line}")"
+
+    if [ "${category}" = 'section' ]; then
+        echo "<h2><i class='fas fa-${icon}'></i>${name}</h1>"
+    elif [ "${category}" = 'item' ]; then
+        url="$(get_element '4-' "${line}")"
+        echo "<a class='card' href='${url}'><i class='fas fa-${icon}'></i>${name}</a>"
+    fi
+}
+
+cat << EOF
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>${title}</title><style>
+body { font-family: segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,Verdana,sans-serif; }
+i { margin-right: 7px; }
+h2 { padding: 10px 0 0 0; color: #444444; }
+a { text-decoration: none; color: #444444; }
+a:hover { opacity: 0.5; }
+.container { max-width: 800px; width: 100%; margin: 15px auto; }
+.card { display: inline-block; text-align: center; background: #eeeeee; text-transform: uppercase; padding: 10px 20px; margin-bottom: 3px; letter-spacing: .1rem; }
+</style><link href="./css/fa.min.css" rel="stylesheet"></head>
+<body>
+<div class='container'>
+EOF
+
+header="$(head -n1 "${configfile}")"
+while IFS="$(printf '\n')" read -r line; do
+    echo "${line}" | grep -q "^${header}" && continue
+    itemize "${line}"
+done < "${configfile}"
+
+cat << EOF
+</div>
+</body></html>
+EOF
+

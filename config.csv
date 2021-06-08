@@ -1,0 +1,18 @@
+Element, Name, Icon, Url
+section, Multimedia, photo-video, -
+item, Music, compact-disc, https://github.com/navidrome/navidrome
+item, Portfolio, camera, https://github.com/saimn/sigal
+item, File Browser, folder-open, https://github.com/filebrowser/filebrowser
+section, Devops, drafting-compass, -
+item, Git Server, code-branch, https://github.com/go-gitea/gitea
+item, Github, box, https://github.com/bderenzo?tab=repositories
+section, Tools, wrench, -
+item, Status Page, heart, https://github.com/bderenzo/tinystatus
+item, Dashboard, bookmark, https://github.com/bderenzo/tinyhome
+item, Docs, book, https://github.com/hedgedoc/hedgedoc
+item, Calendar, calendar-alt, https://github.com/Kozea/Radicale
+item, Password, key, https://github.com/keeweb/keeweb
+item, Home Assistant, home, https://github.com/home-assistant/core
+section, Network, network-wired, -
+item, OpenWRT, wifi, https://github.com/openwrt/openwrt
+item, Pi-Hole, ban, https://github.com/pi-hole/pi-hole
