@@ -15,7 +15,7 @@ An example site is available [here](https://lab.bdro.fr/tinyhome/).
 
 ## Setup
 
-To use generate a personnal dashboard:
+To generate a personnal dashboard:
 
 * Clone the repository and go to the created directory
 * Edit the configuration file `config.csv`
