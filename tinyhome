@@ -9,8 +9,8 @@ get_element(){
 
 itemize(){
     line="${1}"
-    category="$(get_element 1 "${line}")"
-    name="$(get_element 2 "${line}")"
+    category="$(get_element '1' "${line}")"
+    name="$(get_element '2' "${line}")"
     icon="$(get_element '3' "${line}")"
 
     if [ "${category}" = 'section' ]; then
@@ -30,6 +30,7 @@ a { text-decoration: none; color: #444444; }
 a:hover { opacity: 0.5; }
 .container { max-width: 800px; width: 100%; margin: 15px auto; }
 .card { display: inline-block; text-align: center; background: #eeeeee; text-transform: uppercase; padding: 10px 20px; margin-bottom: 3px; letter-spacing: .1rem; }
+@media (prefers-color-scheme: dark) { body { background: #000000; filter: invert(1) hue-rotate(.5turn); } }
 </style><link href="./css/fa.min.css" rel="stylesheet"></head>
 <body>
 <div class='container'>
