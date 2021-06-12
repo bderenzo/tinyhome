@@ -21,7 +21,7 @@ To generate a personnal dashboard:
 * Clone the repository and go to the created directory
 * Edit the configuration file `config.csv`
 * Generate homepage `./tinyhome > index.html`
-* Serve the page with your favorite web server
+* Serve the page (along with the css and webfonts folders) with your favorite web server
 
 ## Configuration file
 
