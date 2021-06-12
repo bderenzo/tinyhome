@@ -1,4 +1,5 @@
 Element, Name, Icon, Url
+heading, My Dashboard, -, -
 section, Multimedia, photo-video, -
 item, Music, compact-disc, https://github.com/navidrome/navidrome
 item, Portfolio, camera, https://github.com/saimn/sigal

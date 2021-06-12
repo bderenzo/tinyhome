@@ -13,7 +13,9 @@ itemize(){
     name="$(get_element '2' "${line}")"
     icon="$(get_element '3' "${line}")"
 
-    if [ "${category}" = 'section' ]; then
+    if [ "${category}" = 'heading' ]; then
+        echo "<h1>${name}</h1>"
+    elif [ "${category}" = 'section' ]; then
         echo "<h2><i class='fas fa-${icon}'></i>${name}</h2>"
     elif [ "${category}" = 'item' ]; then
         url="$(get_element '4-' "${line}")"
@@ -25,6 +27,7 @@ cat << EOF
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>${title}</title><style>
 body { font-family: segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,Verdana,sans-serif; }
 i { margin-right: 7px; }
+h1 { padding: 15px 0 0 0; color: #444444; text-align: center; }
 h2 { padding: 10px 0 0 0; color: #444444; }
 a { text-decoration: none; color: #444444; }
 a:hover { opacity: 0.5; }
