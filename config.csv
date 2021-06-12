@@ -1,4 +1,5 @@
 Element, Name, Icon, Url
+heading, Heading One, -, -
 section, Multimedia, photo-video, -
 item, Music, compact-disc, https://github.com/navidrome/navidrome
 item, Portfolio, camera, https://github.com/saimn/sigal
@@ -6,6 +7,7 @@ item, File Browser, folder-open, https://github.com/filebrowser/filebrowser
 section, Devops, drafting-compass, -
 item, Git Server, code-branch, https://github.com/go-gitea/gitea
 item, Github, box, https://github.com/bderenzo?tab=repositories
+heading, Heading Two, -, -
 section, Tools, wrench, -
 item, Status Page, heart, https://github.com/bderenzo/tinystatus
 item, Dashboard, bookmark, https://github.com/bderenzo/tinyhome
