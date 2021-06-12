@@ -1,6 +1,6 @@
-# Tinyhome
+# tinyhome
 
-tinyhome generate an html homepage via shell script.
+tinyhome generates a static HTML homepage via shell script.
 
 ## Features
 
@@ -16,11 +16,11 @@ An example site is available [here](https://lab.bdro.fr/tinyhome/).
 
 ## Setup
 
-To generate a personnal dashboard:
+To generate a personal dashboard:
 
 * Clone the repository and go to the created directory
 * Edit the configuration file `config.csv`
-* Generate homepage `./tinyhome > index.html`
+* Generate the homepage `./tinyhome > index.html`
 * Serve the page with your favorite web server
 
 ## Configuration file
