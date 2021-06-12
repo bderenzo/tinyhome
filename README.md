@@ -32,6 +32,7 @@ Element, Name, Icon, Url
 
 For instance:
 ```
+heading, Heading, -, -
 section, Tools, wrench, -
 item, Status Page, heart, https://github.com/bderenzo/tinystatus
 item, Dashboard, bookmark, https://github.com/bderenzo/tinyhome
