@@ -7,7 +7,7 @@ tinyhome generates a static HTML homepage via shell script.
 * Minimal dependencies (coreutils)
 * Easy configuration and customisation
 * Tiny optimized result page
-* [Font Awesome](https://fontawesome.com/v5.15/icons?d=listing&p=2&s=solid&m=free) icons
+* [Font Awesome](https://fontawesome.com/v5.15/icons?d=listing&p=2&s=solid&m=free) icons (solid only)
 * Dark mode
 
 ## Demo
