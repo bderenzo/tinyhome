@@ -19,7 +19,7 @@ itemize(){
         echo "<h2><i class='fas fa-${icon}'></i>${name}</h2>"
     elif [ "${category}" = 'item' ]; then
         url="$(get_element '4-' "${line}")"
-        echo "<a class='card' href='${url}'><i class='fas fa-${icon}'></i>${name}</a>"
+        echo "<a class='card' href='${url}' target='_blank'><i class='fas fa-${icon}'></i>${name}</a>"
     fi
 }
 
