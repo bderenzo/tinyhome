@@ -2,6 +2,7 @@
 
 title=tinyhome
 configfile="${1:-config.csv}"
+outfile="index.html"
 
 get_element(){
     echo "${2}" | cut -d',' -f${1} | xargs
@@ -14,16 +15,16 @@ itemize(){
     icon="$(get_element '3' "${line}")"
 
     if [ "${category}" = 'heading' ]; then
-        echo "<h1>${name}</h1>"
+        echo "<h1>${name}</h1>" >> $outfile
     elif [ "${category}" = 'section' ]; then
-        echo "<h2><i class='fas fa-${icon}'></i>${name}</h2>"
+        echo "<h2><i class='fas fa-${icon}'></i>${name}</h2>" >> $outfile
     elif [ "${category}" = 'item' ]; then
         url="$(get_element '4-' "${line}")"
-        echo "<a class='card' href='${url}'><i class='fas fa-${icon}'></i>${name}</a>"
+        echo "<a class='card' href='${url}'><i class='fas fa-${icon}'></i>${name}</a>" >> $outfile
     fi
 }
 
-cat << EOF
+cat << EOF  > $outfile
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>${title}</title><style>
 body { font-family: segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,Verdana,sans-serif; }
 i { margin-right: 7px; }
@@ -45,7 +46,7 @@ while IFS="$(printf '\n')" read -r line; do
     itemize "${line}"
 done < "${configfile}"
 
-cat << EOF
+cat << EOF >> $outfile
 </div>
 </body></html>
 EOF
